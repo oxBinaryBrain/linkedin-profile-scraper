@@ -1,5 +1,6 @@
 {
   "title": "LinkedIn Profile Scraper",
+  "description": "Scrapes data from LinkedIn profiles.",
   "type": "object",
   "schemaVersion": 1,
   "properties": {
