@@ -10,7 +10,6 @@
       "description": "List of LinkedIn profile URLs to scrape.",
       "items": {
         "type": "string",
-        "format": "uri",
         "enum": [
           "https://www.linkedin.com/in/john-doe/",
           "https://www.linkedin.com/in/jane-smith/"
