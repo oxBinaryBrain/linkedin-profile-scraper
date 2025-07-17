@@ -1,0 +1,123 @@
+{
+  "title": "LinkedIn Scraper Output Schema",
+  "type": "object",
+  "properties": {
+    "fullName": {
+      "title": "Full Name",
+      "type": "string",
+      "description": "The full name of the LinkedIn profile owner."
+    },
+    "headline": {
+      "title": "Headline",
+      "type": "string",
+      "description": "The current job title or headline from the profile."
+    },
+    "location": {
+      "title": "Location",
+      "type": "string",
+      "description": "Geographic location listed on the profile."
+    },
+    "summary": {
+      "title": "Summary",
+      "type": "string",
+      "description": "The summary or about section of the profile."
+    },
+    "experience": {
+      "title": "Work Experience",
+      "type": "array",
+      "description": "List of current and past work experiences.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Job title"
+          },
+          "company": {
+            "type": "string",
+            "description": "Company name"
+          },
+          "location": {
+            "type": "string",
+            "description": "Location of the job"
+          },
+          "dateRange": {
+            "type": "string",
+            "description": "Date range of employment"
+          },
+          "description": {
+            "type": "string",
+            "description": "Job description and responsibilities"
+          }
+        }
+      }
+    },
+    "education": {
+      "title": "Education",
+      "type": "array",
+      "description": "List of educational institutions attended.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "school": {
+            "type": "string",
+            "description": "Name of the educational institution"
+          },
+          "degree": {
+            "type": "string",
+            "description": "Degree or certification received"
+          },
+          "fieldOfStudy": {
+            "type": "string",
+            "description": "Field of study"
+          },
+          "dateRange": {
+            "type": "string",
+            "description": "Years attended"
+          }
+        }
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "type": "array",
+      "description": "List of endorsed or listed skills.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "profileUrl": {
+      "title": "LinkedIn Profile URL",
+      "type": "string",
+      "format": "uri",
+      "description": "The original LinkedIn profile URL that was scraped."
+    },
+    "email": {
+      "title": "Public Email",
+      "type": "string",
+      "format": "email",
+      "description": "Publicly listed email if available."
+    },
+    "website": {
+      "title": "Website",
+      "type": "string",
+      "format": "uri",
+      "description": "Personal or company website listed on the profile."
+    },
+    "contactInfo": {
+      "title": "Other Contact Info",
+      "type": "object",
+      "description": "Other contact links like Twitter, GitHub, etc.",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "profileImage": {
+      "title": "Profile Image URL",
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the profile image."
+    }
+  },
+  "required": ["fullName", "headline", "profileUrl"]
+}
