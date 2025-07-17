@@ -9,13 +9,10 @@
       "type": "array",
       "description": "List of LinkedIn profile URLs to scrape.",
       "editor": "stringList",
-      "items": {
-        "type": "string",
-        "enum": [
-          "https://www.linkedin.com/in/example1/",
-          "https://www.linkedin.com/in/example2/"
-        ]
-      }
+      "enum": [
+        "https://www.linkedin.com/in/example1/",
+        "https://www.linkedin.com/in/example2/"
+      ]
     }
   },
   "required": ["profileUrls"]
