@@ -1,18 +1,14 @@
 {
   "title": "LinkedIn Profile Scraper",
-  "description": "Scrapes data from specified LinkedIn profile URLs.",
+  "description": "Scrapes data from multiple LinkedIn profile URLs.",
   "type": "object",
   "schemaVersion": 1,
   "properties": {
     "profileUrls": {
       "title": "LinkedIn Profile URLs",
       "type": "array",
-      "description": "List of LinkedIn profile URLs to scrape.",
-      "editor": "stringList",
-      "enum": [
-        "https://www.linkedin.com/in/example1/",
-        "https://www.linkedin.com/in/example2/"
-      ]
+      "description": "Paste the LinkedIn profile URLs here (one per line).",
+      "editor": "stringList"
     }
   },
   "required": ["profileUrls"]
