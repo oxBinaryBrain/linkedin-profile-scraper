@@ -1,0 +1,18 @@
+{
+  "title": "LinkedIn Profile Scraper",
+  "description": "Scrape multiple LinkedIn profiles",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "profileUrls": {
+      "type": "array",
+      "title": "LinkedIn URLs",
+      "description": "List of LinkedIn profile URLs to scrape",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    }
+  },
+  "required": ["profileUrls"]
+}
